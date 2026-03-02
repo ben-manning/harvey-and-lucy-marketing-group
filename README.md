@@ -11,3 +11,8 @@ Project:Accessible Multi-Page Marketing Site
 * 3 pages (Home, About, Contact)
 * Proper landmarks, labels, tab navigation
 * Lighthouse score 95+
+
+
+
+### References
+* https://developer.mozilla.org/en-US/curriculum/core/semantic-html/
