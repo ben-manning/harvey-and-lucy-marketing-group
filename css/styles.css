@@ -54,6 +54,16 @@ header nav ul {
   ===================== */
 .hero {
   background-color: var(--off-white);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.hero-logo {
+  width: 200px;
+  height: auto;
+  margin-bottom: 1.5rem;
 }
 
 .hero h1 {
@@ -70,9 +80,29 @@ header nav ul {
   text-decoration: none;
 }
 
-/* =====================
-  SERVICES
+/* =====================   PHILOSOPHY
+   ===================== */
+.philosophy {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 2rem;
+  align-items: center;
+}
+
+.philosophy-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* =====================  SERVICES
   ===================== */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
 .card {
   background-color: var(--white);
   border: 1px solid var(--light-gray);
@@ -84,4 +114,13 @@ header nav ul {
 
 .card p {
   color: var(--charcoal);
+}
+
+/* =====================
+   TESTIMONIALS
+   ===================== */
+.testimonials-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
 }
