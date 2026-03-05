@@ -514,6 +514,15 @@ header nav ul {
     display: flex;
   }
 
+  .cta-group {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .cta-group .btn {
+    text-align: center;
+  }
+
   header nav ul {
     display: none;
     position: absolute;
