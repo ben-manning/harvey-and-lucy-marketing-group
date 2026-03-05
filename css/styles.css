@@ -152,6 +152,7 @@ header nav ul {
 
 .hero p {
   color: var(--charcoal);
+  max-width: 75%;
 }
 
 .cta-group {
@@ -206,12 +207,37 @@ header nav ul {
   gap: 2rem;
   align-items: center;
   padding: 2rem;
+  overflow: hidden;
+}
+
+@media (min-width: 769px) {
+  .philosophy-image {
+    transform: translateX(150%);
+    opacity: 0;
+    transition: transform 1.4s cubic-bezier(0.25, 0.46, 0.45, 0.94), opacity 1.4s ease;
+  }
+
+  .philosophy-copy {
+    opacity: 0;
+    transition: opacity 0.5s ease;
+  }
+
+  .philosophy--visible .philosophy-image {
+    transform: translateX(0);
+    opacity: 1;
+  }
+
+  .philosophy--text-visible .philosophy-copy {
+    opacity: 1;
+  }
 }
 
 .philosophy-image img {
   width: 100%;
   height: auto;
+  object-fit: cover;
   display: block;
+  border-radius: 8px;
 }
 
 .philosophy-copy {
@@ -241,6 +267,19 @@ header nav ul {
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.5s ease, transform 0.5s ease, box-shadow 0.3s ease;
+}
+
+.card.card--visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 24px rgba(31, 42, 68, 0.12);
 }
 
 .card h3 {
@@ -269,6 +308,19 @@ header nav ul {
   border-radius: 8px;
   padding: 1.5rem;
   margin: 0;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.5s ease, transform 0.5s ease, box-shadow 0.3s ease;
+}
+
+.testimonial-card.card--visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.testimonial-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 24px rgba(31, 42, 68, 0.12);
 }
 
 .testimonial-card footer {
@@ -493,6 +545,10 @@ header nav ul {
     width: 100%;
   }
 
+  .hero p {
+    max-width: 100%;
+  }
+
   .about-story,
   .about-story--reversed {
     grid-template-columns: 1fr;
@@ -511,6 +567,58 @@ header nav ul {
   }
 
   .nav-toggle {
+    display: flex;
+  }
+
+  header nav ul {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: var(--navy);
+    flex-direction: column;
+    gap: 0;
+    padding: 0.5rem 0;
+    z-index: 100;
+  }
+
+  header nav ul.nav-open {
+    display: flex;
+  }
+
+  header nav ul li a {
+    display: block;
+    padding: 0.75rem 2rem;
+  }
+
+  header nav {
+    position: relative;
+  }
+
+  .card,
+  .testimonial-card {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: box-shadow 0.3s ease !important;
+  }
+
+  .card:hover,
+  .testimonial-card:hover {
+    transform: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .card,
+  .testimonial-card,
+  .philosophy-image,
+  .philosophy-copy {
+    transition: none !important;
+    transform: none !important;
+    opacity: 1 !important;
+  }
+}
     display: flex;
   }
 
