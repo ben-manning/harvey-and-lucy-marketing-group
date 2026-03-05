@@ -541,6 +541,10 @@ header nav ul {
     grid-template-columns: 1fr;
   }
 
+  .testimonials h2 {
+    text-align: center;
+  }
+
   .hero-logo {
     width: 100%;
   }
