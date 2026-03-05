@@ -22,7 +22,8 @@
 
   <div class="contact-form-section">
     <p class="required-note"><span class="required-indicator" aria-hidden="true">*</span> Required field</p>
-    <form novalidate>
+    <form netlify name="contact" novalidate>
+      <input type="hidden" name="form-name" value="contact">
       <div class="form-group">
         <label for="name">Name <span class="required-indicator" aria-hidden="true">*</span></label>
         <input type="text" id="name" name="name" placeholder="Your full name" required aria-describedby="name-error">

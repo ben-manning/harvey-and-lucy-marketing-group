@@ -58,7 +58,7 @@ fields.forEach(field => {
   });
 });
 
-form.addEventListener('submit', e => {
+form.addEventListener('submit', async e => {
   e.preventDefault();
   formStatus.textContent = '';
   formStatus.className = 'form-status';
@@ -80,16 +80,30 @@ form.addEventListener('submit', e => {
     return;
   }
 
-  // Simulate successful submission (replace with real fetch when backend is ready)
+  // Submit to Netlify Forms
   const submitBtn = form.querySelector('button[type="submit"]');
   submitBtn.disabled = true;
   submitBtn.textContent = 'Sending…';
 
-  setTimeout(() => {
-    form.reset();
+  try {
+    const response = await fetch('/', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      body: new URLSearchParams(new FormData(form)).toString()
+    });
+
+    if (response.ok) {
+      form.reset();
+      formStatus.className = 'form-status form-status--success';
+      formStatus.textContent = 'Thank you — your message has been sent. We\'ll be in touch soon.';
+    } else {
+      throw new Error('Submission failed');
+    }
+  } catch {
+    formStatus.className = 'form-status form-status--error';
+    formStatus.textContent = 'Something went wrong. Please try again.';
+  } finally {
     submitBtn.disabled = false;
     submitBtn.textContent = 'Send Message';
-    formStatus.className = 'form-status form-status--success';
-    formStatus.textContent = 'Thank you — your message has been sent. We\'ll be in touch soon.';
-  }, 1000);
+  }
 });
