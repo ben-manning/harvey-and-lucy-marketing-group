@@ -236,3 +236,31 @@ header nav ul {
   font-size: 1rem;
   font-weight: 600;
 }
+
+/* =====================
+   MOBILE
+   ===================== */
+@media (max-width: 768px) {
+  .philosophy {
+    grid-template-columns: 1fr;
+  }
+
+  .philosophy-image {
+    order: -1;
+  }
+
+  .philosophy-image img {
+    width: 100%;
+    max-height: 400px;
+    object-fit: cover;
+  }
+
+  .services-grid,
+  .testimonials-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-logo {
+    width: 100%;
+  }
+}
