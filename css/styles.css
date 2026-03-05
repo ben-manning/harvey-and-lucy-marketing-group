@@ -1,6 +1,6 @@
 /* =====================
-   BASE
-   ===================== */
+  BASE
+  ===================== */
 :root {
   --navy:      #1F2A44;
   --white:     #FFFFFF;
@@ -16,8 +16,8 @@ body {
 }
 
 /* =====================
-   NAV
-   ===================== */
+  NAV
+  ===================== */
 header {
   background-color: var(--navy);
   color: var(--white);
@@ -26,6 +26,12 @@ header {
 header nav a {
   color: var(--white);
   text-decoration: none;
+}
+
+header .logo img {
+  height: 48px;
+  width: auto;
+  display: block;
 }
 
 header nav {
@@ -44,8 +50,8 @@ header nav ul {
 }
 
 /* =====================
-   HERO
-   ===================== */
+  HERO
+  ===================== */
 .hero {
   background-color: var(--off-white);
 }
@@ -65,8 +71,8 @@ header nav ul {
 }
 
 /* =====================
-   SERVICES
-   ===================== */
+  SERVICES
+  ===================== */
 .card {
   background-color: var(--white);
   border: 1px solid var(--light-gray);
