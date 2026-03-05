@@ -236,6 +236,7 @@ header nav ul {
   border: 1px solid var(--light-gray);
   border-radius: 8px;
   padding: 1.5rem;
+  margin: 0;
 }
 
 .testimonial-card footer {
