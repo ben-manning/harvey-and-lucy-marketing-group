@@ -1,6 +1,7 @@
 export const navbar = `
+<a class="skip-to-content" href="#main-content">Skip to main content</a>
 <header>
-  <nav>
+  <nav aria-label="Main navigation">
     <a href="index.html" class="logo">
       <img src="assets/images/monogram.svg" alt="Harvey &amp; Lucy Growth Partners">
     </a>

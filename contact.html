@@ -3,9 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="css/styles.css">
   <link rel="icon" type="image/svg+xml" href="assets/images/monogram.svg">
   <script src="js/main.js" type="module"></script>
@@ -13,32 +11,40 @@
 </head>
 <body>
   <div id="navbar"></div>
+
+  <main id="main-content">
   <section class="contact-hero">
     <h1>Start the Conversation</h1>
     <p>Tell us about your organization and what you're working toward. We'll be in touch.</p>
   </section>
 
   <section class="contact-form-section">
-    <form>
+    <p class="required-note"><span class="required-indicator" aria-hidden="true">*</span> Required field</p>
+    <form novalidate>
       <div class="form-group">
-        <label for="name">Name</label>
-        <input type="text" id="name" name="name" placeholder="Your full name" required>
+        <label for="name">Name <span class="required-indicator" aria-hidden="true">*</span></label>
+        <input type="text" id="name" name="name" placeholder="Your full name" required aria-required="true" aria-describedby="name-error">
+        <span id="name-error" class="field-error" aria-live="polite"></span>
       </div>
       <div class="form-group">
-        <label for="email">Email</label>
-        <input type="email" id="email" name="email" placeholder="your@email.com" required>
+        <label for="email">Email <span class="required-indicator" aria-hidden="true">*</span></label>
+        <input type="email" id="email" name="email" placeholder="your@email.com" required aria-required="true" aria-describedby="email-error">
+        <span id="email-error" class="field-error" aria-live="polite"></span>
       </div>
       <div class="form-group">
         <label for="organization">Organization</label>
         <input type="text" id="organization" name="organization" placeholder="Your company or organization">
       </div>
       <div class="form-group">
-        <label for="message">Message</label>
-        <textarea id="message" name="message" placeholder="Tell us what you're working on..." required></textarea>
+        <label for="message">Message <span class="required-indicator" aria-hidden="true">*</span></label>
+        <textarea id="message" name="message" placeholder="Tell us what you're working on..." required aria-required="true" aria-describedby="message-error"></textarea>
+        <span id="message-error" class="field-error" aria-live="polite"></span>
       </div>
       <button type="submit" class="btn btn-primary">Send Message</button>
+      <div id="form-status" class="form-status" aria-live="polite" aria-atomic="true"></div>
     </form>
   </section>
+  </main>
   <div id="footer"></div>
 
 </body>
