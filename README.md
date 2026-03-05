@@ -1,5 +1,7 @@
 # Harvey & Lucy Growth Partners
 
+![Harvey and Lucy](assets/images/harvey-and-lucy.webp)
+
 A multi-page marketing website for a fictional growth strategy firm, built as a hands-on exercise in semantic HTML, accessibility, and front-end performance.
 
 ---
