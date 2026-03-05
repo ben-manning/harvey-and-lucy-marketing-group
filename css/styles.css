@@ -150,6 +150,11 @@ header nav ul {
   outline-offset: 3px;
 }
 
+.btn:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
 .btn-primary {
   background-color: var(--gold);
   color: var(--navy);
@@ -413,6 +418,14 @@ header nav ul {
 .form-status {
   margin-top: 1rem;
   font-weight: 600;
+}
+
+.form-status--success {
+  color: #276749;
+  background-color: #F0FFF4;
+  border: 1px solid #9AE6B4;
+  border-radius: 4px;
+  padding: 0.75rem 1rem;
 }
 
 .form-group input[aria-invalid="true"],
