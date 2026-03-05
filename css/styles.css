@@ -238,6 +238,64 @@ header nav ul {
 }
 
 /* =====================
+   ABOUT
+   ===================== */
+.about-hero {
+  text-align: center;
+  padding: 4rem 2rem;
+  background-color: var(--navy);
+  color: var(--white);
+}
+
+.about-hero h1 {
+  color: var(--white);
+}
+
+.about-story {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 2rem;
+  align-items: start;
+  padding: 2rem;
+}
+
+.about-story--reversed {
+  grid-template-columns: 2fr 1fr;
+}
+
+.about-image img {
+  width: 100%;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.values {
+  padding: 2rem;
+}
+
+.values-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+.value-card {
+  background-color: var(--white);
+  border: 1px solid var(--light-gray);
+  border-radius: 8px;
+  padding: 1.5rem;
+  text-align: center;
+}
+
+.value-card h3 {
+  color: var(--navy);
+}
+
+.value-card p {
+  color: var(--charcoal);
+}
+
+/* =====================
    MOBILE
    ===================== */
 @media (max-width: 768px) {
@@ -262,5 +320,18 @@ header nav ul {
 
   .hero-logo {
     width: 100%;
+  }
+
+  .about-story,
+  .about-story--reversed {
+    grid-template-columns: 1fr;
+  }
+
+  .about-story--reversed .about-image {
+    order: -1;
+  }
+
+  .values-grid {
+    grid-template-columns: 1fr;
   }
 }
