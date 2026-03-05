@@ -1,5 +1,3 @@
-fetch('/partials/navbar.html')
-  .then(res => res.text())
-  .then(html => {
-    document.getElementById('navbar').outerHTML = html;
-  });
+import { navbar } from '../partials/navbar.js';
+
+document.getElementById('navbar').outerHTML = navbar;
