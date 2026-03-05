@@ -1,0 +1,81 @@
+/* =====================
+   BASE
+   ===================== */
+:root {
+  --navy:      #1F2A44;
+  --white:     #FFFFFF;
+  --off-white: #F8F7F4;
+  --charcoal:  #4A5568;
+  --gold:      #C9A84C;
+  --light-gray: #E2E8F0;
+}
+
+body {
+  background-color: var(--off-white);
+  color: var(--navy);
+}
+
+/* =====================
+   NAV
+   ===================== */
+header {
+  background-color: var(--navy);
+  color: var(--white);
+}
+
+header nav a {
+  color: var(--white);
+  text-decoration: none;
+}
+
+header nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+}
+
+header nav ul {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* =====================
+   HERO
+   ===================== */
+.hero {
+  background-color: var(--off-white);
+}
+
+.hero h1 {
+  color: var(--navy);
+}
+
+.hero p {
+  color: var(--charcoal);
+}
+
+.btn-primary {
+  background-color: var(--gold);
+  color: var(--navy);
+  text-decoration: none;
+}
+
+/* =====================
+   SERVICES
+   ===================== */
+.card {
+  background-color: var(--white);
+  border: 1px solid var(--light-gray);
+}
+
+.card h3 {
+  color: var(--navy);
+}
+
+.card p {
+  color: var(--charcoal);
+}
