@@ -534,13 +534,13 @@ header nav ul {
 
 .form-group input.error,
 .form-group textarea.error {
-  border-color: #C0392B;
-  outline-color: #C0392B;
+  border-color: var(--color-danger);
+  outline-color: var(--color-danger);
 }
 
 .field-error {
   display: block;
-  color: #C0392B;
+  color: var(--color-danger);
   font-size: 0.875rem;
   margin-top: 0.25rem;
   min-height: 1.2em;
@@ -553,7 +553,7 @@ header nav ul {
 }
 
 .required-indicator {
-  color: #C0392B;
+  color: var(--color-danger);
   margin-left: 0.15rem;
 }
 
@@ -563,7 +563,7 @@ header nav ul {
 }
 
 .form-status--success {
-  color: #276749;
+  color: var(--color-success);
   background-color: #F0FFF4;
   border: 1px solid #9AE6B4;
   border-radius: 4px;
@@ -572,7 +572,7 @@ header nav ul {
 
 .form-group input[aria-invalid="true"],
 .form-group textarea[aria-invalid="true"] {
-  border-color: #C0392B;
+  border-color: var(--color-danger);
 }
 
 /* =====================
