@@ -9,16 +9,73 @@
   --gold:      #C9A84C;
   --light-gray: #E2E8F0;
   --banner-height: 300px;
+
+  /* Typography */
+  --font-body: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --font-heading: "Palatino Linotype", "Book Antiqua", Palatino, Georgia, serif;
+
+  /* Spacing scale */
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-6: 1.5rem;
+  --space-8: 2rem;
+
+  /* Radius, shadow, motion */
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --shadow-card-hover: 0 12px 24px rgba(31, 42, 68, 0.12);
+  --duration-fast: 0.2s;
+  --duration-base: 0.3s;
+  --duration-slow: 0.5s;
+  --ease-standard: ease;
+
+  /* State colors */
+  --color-danger: #C0392B;
+  --color-success: #276749;
+  --color-success-bg: #F0FFF4;
+  --color-success-border: #9AE6B4;
+
+  /* Focus */
+  --focus-ring-color: var(--navy);
+  --focus-ring-width: 2px;
+  --focus-ring-offset: 2px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html:focus-within {
+  scroll-behavior: smooth;
 }
 
 body {
-  background-color: var(--off-white);
-  color: var(--navy);
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  margin: 0;
+  font-family: var(--font-body);
 }
 
 h1, h2, h3 {
-  font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, Georgia, serif;
+  margin-top: 0;
+  font-family: var(--font-heading);
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+/* Shared keyboard focus */
+:where(a, button, input, textarea, select, [tabindex]):focus-visible {
+  outline: var(--focus-ring-width) solid var(--focus-ring-color);
+  outline-offset: var(--focus-ring-offset);
 }
 
 /* =====================
@@ -72,12 +129,12 @@ header nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem 2rem;
+  padding: 1rem var(--space-8);
 }
 
 header nav ul {
   display: flex;
-  gap: 2rem;
+  gap: var(--space-8);
   list-style: none;
   margin: 0;
   padding: 0;
@@ -125,7 +182,7 @@ header nav ul {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 2rem;
+  padding: var(--space-8);
 }
 
 /* =====================
@@ -136,7 +193,7 @@ header nav ul {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 2rem;
+  padding: var(--space-8);
 }
 
 .hero-logo {
@@ -160,7 +217,7 @@ header nav ul {
   gap: 1rem;
   justify-content: center;
   flex-wrap: wrap;
-  margin-top: 2rem;
+  margin-top: var(--space-8);
 }
 
 .btn {
@@ -204,9 +261,9 @@ header nav ul {
 .philosophy {
   display: grid;
   grid-template-columns: 1fr 2fr;
-  gap: 2rem;
+  gap: var(--space-8);
   align-items: center;
-  padding: 2rem;
+  padding: var(--space-8);
   overflow: hidden;
 }
 
@@ -253,7 +310,7 @@ header nav ul {
 }
 
 .services {
-  padding: 2rem;
+  padding: var(--space-8);
 }
 
 .card {
@@ -300,7 +357,7 @@ header nav ul {
 }
 
 .testimonials {
-  padding: 2rem;
+  padding: var(--space-8);
 }
 
 .testimonial-card {
@@ -341,7 +398,7 @@ header nav ul {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem 2rem;
+  padding: 1rem var(--space-8);
 }
 
 .site-footer p {
@@ -350,7 +407,7 @@ header nav ul {
 
 .site-footer nav {
   display: flex;
-  gap: 2rem;
+  gap: var(--space-8);
 }
 
 .site-footer nav a {
@@ -365,7 +422,7 @@ header nav ul {
    ===================== */
 .about-hero {
   text-align: center;
-  padding: 4rem 2rem;
+  padding: 4rem var(--space-8);
   background-color: var(--navy);
   color: var(--white);
 }
@@ -377,9 +434,9 @@ header nav ul {
 .about-story {
   display: grid;
   grid-template-columns: 1fr 2fr;
-  gap: 2rem;
+  gap: var(--space-8);
   align-items: start;
-  padding: 2rem;
+  padding: var(--space-8);
 }
 
 .about-story--reversed {
@@ -393,7 +450,7 @@ header nav ul {
 }
 
 .values {
-  padding: 2rem;
+  padding: var(--space-8);
 }
 
 .values-grid {
@@ -423,7 +480,7 @@ header nav ul {
    ===================== */
 .contact-hero {
   text-align: center;
-  padding: 4rem 2rem;
+  padding: 4rem var(--space-8);
   background-color: var(--navy);
   color: var(--white);
 }
@@ -436,7 +493,7 @@ header nav ul {
 .contact-form-section {
   max-width: 600px;
   margin: 0 auto;
-  padding: 3rem 2rem;
+  padding: 3rem var(--space-8);
 }
 
 .form-group {
@@ -602,7 +659,7 @@ header nav ul {
 
   header nav ul li a {
     display: block;
-    padding: 0.75rem 2rem;
+    padding: 0.75rem var(--space-8);
   }
 
   header nav {
