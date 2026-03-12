@@ -294,7 +294,7 @@ header nav ul {
   height: auto;
   object-fit: cover;
   display: block;
-  border-radius: 8px;
+  border-radius: var(--radius-md);
 }
 
 .philosophy-copy {
@@ -316,7 +316,7 @@ header nav ul {
 .card {
   background-color: var(--white);
   border: 1px solid var(--light-gray);
-  border-radius: 8px;
+  border-radius: var(--radius-md);
   text-align: center;
   padding: 1.5rem;
   min-height: 300px;
@@ -362,7 +362,7 @@ header nav ul {
 
 .testimonial-card {
   border: 1px solid var(--light-gray);
-  border-radius: 8px;
+  border-radius: var(--radius-md);
   padding: 1.5rem;
   margin: 0;
   opacity: 0;
@@ -445,7 +445,7 @@ header nav ul {
 
 .about-image img {
   width: 100%;
-  border-radius: 8px;
+  border-radius: var(--radius-md);
   object-fit: cover;
 }
 
@@ -462,8 +462,8 @@ header nav ul {
 .value-card {
   background-color: var(--white);
   border: 1px solid var(--light-gray);
-  border-radius: 8px;
-  padding: 1.5rem;
+  border-radius: var(--radius-md);
+  padding: var(--space-6);
   text-align: center;
 }
 
@@ -511,8 +511,8 @@ header nav ul {
 .form-group textarea {
   width: 100%;
   border: 1px solid var(--light-gray);
-  border-radius: 8px;
-  padding: 0.75rem;
+  border-radius: var(--radius-md);
+  padding: var(--space-3);
   font-family: var(--font-body);
   font-size: 1rem;
   color: var(--navy);
